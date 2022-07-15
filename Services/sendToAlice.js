@@ -1,4 +1,5 @@
 const { getReplic } = require('../public/replics/getReplic');
+const { getRandomReplic } = require('../public/replics/getRandomReplic');
 
 const { standartPattern } = require("../public/responsePatterns/standartPattern");
 
@@ -14,15 +15,16 @@ const sendToAlice = async (req, res) => {
   // console.log(tokens);
   // console.log(entities[0]);
   //console.log(req.body)
-  console.log(standartPattern(getReplic()[0].text))
 
   let first_name = entities[0] && entities[0].value && entities[0].value.first_name;
   let last_name = entities[0] && entities[0].value && entities[0].value.last_name;
-
+  let randomNumber = Math.floor(Math.random()*getRandomReplic(command).length);
+  console.log(randomNumber)
+  
   if(message_id == 0) {
       res.send(standartPattern(getReplic()[0].text))
   } else {
-      res.send(standartPattern(getReplic(first_name)[1].text))
+      res.send(standartPattern(getRandomReplic(command)[randomNumber].text))
   }
     
 }

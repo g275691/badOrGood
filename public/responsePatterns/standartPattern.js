@@ -1,6 +1,6 @@
 const standartPattern = ( 
   text,
-  tts=text,
+  tts,
   buttons=[],
   end_session=false
    ) => {
