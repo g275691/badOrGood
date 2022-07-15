@@ -24,7 +24,7 @@ const sendToAlice = async (req, res) => {
   if(message_id == 0) {
       res.send(standartPattern(getReplic()[0].text))
   } else {
-      res.send(standartPattern(getRandomReplic(command)[randomNumber].text))
+      res.send(standartPattern(getRandomReplic(command)[10].text))
   }
     
 }
