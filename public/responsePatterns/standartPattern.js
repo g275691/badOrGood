@@ -1,8 +1,10 @@
 const standartPattern = ( 
   text,
+  numberCommand,
   tts,
   buttons=[],
-  end_session=false
+  end_session=false,
+  
    ) => {
   
   return {
@@ -17,7 +19,8 @@ const standartPattern = (
       "directives": {}
     },
     "session_state": {
-        "step": 0
+      "step": 0,
+      "numberCommand": numberCommand
     },
     "version": "1.0"
   }
