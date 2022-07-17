@@ -19,11 +19,17 @@ const soundArfa = `<speaker audio="alice-music-harp-1.opus">`
 const soundVolinka = `<speaker audio="alice-music-bagpipes-1.opus">`
 const soundCow = `<speaker audio="alice-sounds-animals-cow-1.opus">`
 const soundMatrix = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/809e5d25-df1e-43d1-8075-59ceae7b6d7e.opus">`
+const soundMoon = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/468c449f-a181-45ca-8521-9f789fa216b5.opus">`
 
 const soundCensura = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/0ac89550-6fe4-4d84-bd7e-521d693fd06a.opus">`
 
 const badStart = (sound = soundWolf) => `продукт вредный ${sound} ${pause(100)}`;
 const goodStart = (sound = soundGood) => `продукт полезный ${sound} ${pause(100)}`;
+
+const aliceChernika = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/bb687492-cefe-4b2f-bb2b-05cade5952f8.opus">`
+const aliceObliza = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/3d50a2b0-d0e5-4e98-94ae-8888b7f4fbfd.opus">`
+const aliceSamodur = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/40b9bac7-4847-4b15-8f05-a56ed9199ce8.opus">`
+const aliceVishenka = `<speaker audio="dialogs-upload/110a0049-8ba9-4439-8ada-b4cee7655ebf/e640d999-c804-46f2-91d6-18b1c08ad90a.opus">`
 
 module.exports.pause = pause;
 module.exports.soundWolf = soundWolf;
@@ -44,6 +50,12 @@ module.exports.soundVolinka = soundVolinka;
 module.exports.soundArfa = soundArfa;
 module.exports.soundCow = soundCow;
 module.exports.soundMatrix = soundMatrix;
+module.exports.soundMoon = soundMoon;
+
+module.exports.aliceChernika = aliceChernika;
+module.exports.aliceObliza = aliceObliza;
+module.exports.aliceSamodur = aliceSamodur;
+module.exports.aliceVishenka = aliceVishenka;
 
 module.exports.soundCensura = soundCensura;
 

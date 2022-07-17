@@ -10,7 +10,6 @@ app
 .use(bodyParser.json())
 .use(express.static(__dirname))
 .get('/', (req, res) => {
-  console.log('user enter');
   res.sendFile(path.join(__dirname + '/views/index.html'));
 })
 .post('/', async (req, res) => {

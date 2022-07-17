@@ -26,20 +26,21 @@ const sendToAlice = async (req, res) => {
   }
   
   if(message_id == 0) {
-    res.send(standartPattern(getReplic()[0].text, commandArr));
+    res.send(standartPattern(getReplic()[0].text, commandArr, getRandomReplic(command)[0].tts));
+    console.log(req.body)
   } else if(state.session.numberCommand.length>1) {
+    console.log(req.body)
     stateArr = state.session.numberCommand;
     let newArr = stateArr.splice(0, 1);
     shuffle(stateArr);
-    // let randomNumber = Math.floor(Math.random()*stateArr.length);
-    // console.log(randomNumber)
-    res.send(standartPattern(getRandomReplic(command)[10].text, stateArr));
+    let firstResplic = stateArr[0];
+    res.send(standartPattern(getRandomReplic(command)[firstResplic].text, stateArr, getRandomReplic(command)[firstResplic].tts));
     
-    console.log(getRandomReplic(command)[stateArr[0]].text);
-    console.log(command);
+    // console.log(getRandomReplic(command)[stateArr[0]].text);
+    // console.log(command);
   } else {
     console.log(`n*----HAPPY_END----*`)
-    res.send(standartPattern(getRandomReplic(command)[1].text, commandArr));
+    res.send(standartPattern(getRandomReplic(command)[12].text, commandArr, getRandomReplic(command)[12].tts));
   }
     
 }

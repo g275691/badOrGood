@@ -2,7 +2,7 @@ const standartPattern = (
   text,
   numberCommand,
   tts,
-  buttons=[],
+  buttons,
   end_session=false,
   
    ) => {
@@ -14,7 +14,15 @@ const standartPattern = (
     //   "card": {
     //     "type": "..."
     //   },     
-      buttons,
+      buttons: [
+        {
+          "title": "Надпись на кнопке 😀",
+          "description": "",
+          "payload": {
+            "id": "dada"
+          },
+        }
+      ],
       end_session,
       "directives": {}
     },
